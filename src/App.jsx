@@ -1,5 +1,6 @@
 import styles from './style';
 //First comment
+//Second commene
 const App = () => (
   <div className="bg-primary w-full overflow-hidden">
     <div className={'${styles.paddingX} ${styles.flexCenter}'}>
