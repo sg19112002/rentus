@@ -6,4 +6,4 @@ const stats = () => {
   )
 }
 
-export default stats
+export default stats;

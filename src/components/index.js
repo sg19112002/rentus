@@ -1,11 +1,11 @@
-import navbar from "./navbar";
-import stats from "./stats";
-import hero from "./hero";
-import footer from "./footer";
+import Navbar from "./navbar.jsx";
+import Stats from "./stats";
+import Hero from "./hero";
+import Footer from "./footer";
 
 export {
-    navbar,
-    stats,
-    hero,
-    footer,
+    Navbar,
+    Stats,
+    Hero,
+    Footer
 };
