@@ -4,8 +4,8 @@ import {navLinks} from '../constants';
 
 const navbar = () => {
   return (
-    <nav className="w-full flex py-6 justify-between items-centre navbar">
-      <img src={logo} alt="ship" className="w-[174px] h-[50px] pr-0" />
+    <nav className="w-full flex py-1 justify-between items-centre navbar">
+      <img src={logo} alt="ship" className="w-[140px] h-[50px] " />
     </nav>
   )
 }
