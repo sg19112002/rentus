@@ -8,7 +8,7 @@ const navbar = () => {
   return (
     <nav className="w-full flex py-1 space-x-3 items-center justify-between navbar ">
       <img src={logo} alt="logo" className="w-[140px] h-[50px] " />
-      <div className="bg-gray-200 rounded-full flex items-center px-2 w-{300px} sm:w-[400px] lg:w-[400] ">
+      <div className="bg-white rounded-full flex items-center px-2 w-{400px} sm:w-[500px] lg:w-[400] ">
         <AiOutlineSearch size={25} />
         <input
           className="bg-transparent p-1 w-full focus:outline-none placeholder:italic"
@@ -16,10 +16,10 @@ const navbar = () => {
           placeholder="Search the Product here..........."
         />
       </div>
-      <div className="flex flex-row p-5">
+      <div className="flex flex-row p">
         <Link
           to="/"
-          className="bg-orange-400 text-white hidden px-2 sm:flex  rounded-full inline-block hover:bg-red-700"
+          className="bg-violet-400 text-white px-2 sm:flex  rounded-full inline-block hover:bg-green-700"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -37,7 +37,7 @@ const navbar = () => {
           </svg>
           cart(0)
         </Link>
-        <Link to="/" className="bg-black text-white hidden px-2 sm:flex  ">
+        <Link to="/" className=" hidden px-4 sm:flex ">
           LOGIN
         </Link>
       </div>
