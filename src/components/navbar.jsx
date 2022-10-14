@@ -6,7 +6,7 @@ import { AiOutlineSearch } from "react-icons/ai";
 
 const navbar = () => {
   return (
-    <nav className="w-full flex py-1 space-x-3 items-center justify-between navbar ">
+    <nav className="w-full flex  items-center justify-between navbar ">
       <img src={logo} alt="logo" className="w-[140px] h-[50px] " />
       <div className="bg-white rounded-full flex items-center px-2 w-{400px} sm:w-[500px] lg:w-[400] ">
         <AiOutlineSearch size={25} />
