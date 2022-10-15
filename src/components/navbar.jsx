@@ -19,7 +19,7 @@ const navbar = () => {
       <div className="flex flex-row space-x-1.5">
         <Link
           to="/"
-          className="bg-violet-400 text-white px-4  py-2 sm:flex rounded-full inline-block hover:bg-green-700"
+          className="bg-violet-400 text-white px-4  py-2 sm:flex rounded-full inline-block hover:bg-violet-600"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
