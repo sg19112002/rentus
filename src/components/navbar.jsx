@@ -7,7 +7,7 @@ import { AiOutlineSearch } from "react-icons/ai";
 const navbar = () => {
   return (
     <nav className="w-full flex  items-center justify-between navbar ">
-      <img src={logo} alt="logo" className="w-[120px] h-[70px] " />
+      <img src={logo} alt="logo" className="w-[170px] h-[80px] " />
       <div className="bg-white rounded-full flex items-center px-2 w-{400px} sm:w-[500px] lg:w-[400] ">
         <AiOutlineSearch size={25} />
         <input
@@ -37,7 +37,7 @@ const navbar = () => {
           </svg>
           cart(0)
         </Link>
-        <Link to="/" className=" bg-black text-white hidden px-3 sm:flex rounded-full ">
+        <Link to="/" className=" bg-black text-white hidden px-4 sm:flex rounded-full ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
