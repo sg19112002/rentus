@@ -9,7 +9,7 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Typed from "react-typed";
 
 const hero = () => {
-  const [layout, setLayout] = useState("");
+  const [layout, setLayout] = useState("product");
   function handleClick(e) {
     const name = e.target.name;
 
