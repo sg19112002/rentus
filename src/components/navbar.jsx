@@ -2,7 +2,7 @@ import { useState } from "react";
 import { close, logo, menu } from "../assets";
 import { navLinks } from "../constants";
 import { Link } from "react-router-dom";
-import { AiOutlineSearch } from "react-icons/ai";
+import { AiOutlineSearch,AiOutlineClose,AiOutlineMenu } from "react-icons/ai";
 
 const navbar = () => {
   return (
@@ -54,6 +54,10 @@ const navbar = () => {
           </svg>
           Signin
         </Link>
+        <div  className=" text-white">
+          <h1 className=" w-full text-3xl font-bold"></h1>
+        
+        </div>
       </div>
     </nav>
   );
