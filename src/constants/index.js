@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { ps, drill, spanner, cycle, speaker, surf } from "../assets";
 
 export const cards = [
@@ -74,3 +75,6 @@ export const cards = [
     img: speaker,
   },
 ];
+=======
+import { people01, people02, people03, facebook, instagram, linkedin, twitter, airbnb, binance, coinbase, dropbox, send, shield, star  } from "../assets";
+>>>>>>> 22efee0a6e7a60067bfa3316f5360551101600af
