@@ -34,7 +34,7 @@ const navbar = () => {
       <div className="flex flex-row space-x-1.5 relative right-11">
         <Link
           to="/"
-          className="bg-violet-400 text-white px-4 relative right-11  py-2 sm:flex rounded-full inline-block hover:bg-violet-600"
+          className="bg-violet-400 text-white px-4 hidden  relative right-11  py-2 sm:flex rounded-full  hover:bg-violet-600"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -52,7 +52,7 @@ const navbar = () => {
           </svg>
           cart(0)
         </Link>
-        <Link to="/" className=" bg-black  text-white px-4 relative right-10  py-2 sm:flex rounded-full">
+        <Link to="/" className=" bg-black  text-white px-4 hidden relative right-10  py-2 sm:flex rounded-full">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -69,11 +69,11 @@ const navbar = () => {
           </svg>
           Signin
         </Link>
-         <div onClick={handleNav} className="md:hidden  ">
+         <div onClick={handleNav} className="sm:hidden  ">
            { nav ?<AiOutlineClose size={20} /> :  <AiOutlineMenu size={30} />}
          </div>
          <div className={nav ? "fixed left-0 top-0 w-[30%] h-full md:hidden border-r-black-600  bg-gray-600 ease-in-out duration-500 " : "fixed left-[-100%]"}>
-         <ul className="uppercase p-4">
+         <ul className="uppercase p-4 flex flex-col">
             <li className="p-4  border-b border-black-600">Home </li>
             <li className="p-4 border-b border-black-600">Your orders</li>
             <li className="p-4 border-b border-black-600"> Your Payements</li>
