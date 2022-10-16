@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { close, logo, menu } from "../assets";
+import {  logo} from "../assets";
 import { Link } from "react-router-dom";
 import { AiOutlineSearch, AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 
