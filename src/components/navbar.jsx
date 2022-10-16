@@ -2,33 +2,34 @@ import { useState } from "react";
 import { close, logo, menu } from "../assets";
 import { navLinks } from "../constants";
 import { Link } from "react-router-dom";
-import { AiOutlineSearch,AiOutlineClose,AiOutlineMenu } from "react-icons/ai";
+import { AiOutlineSearch, AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 
 const navbar = () => {
-   const[ nav,setNav] =useState(false)
+  const [nav, setNav] = useState(false);
 
-    const handleNav= () => {
-      setNav(!nav)
-    }
-  
+  const handleNav = () => {
+    setNav(!nav);
+  };
+
   return (
     <nav className="flex  items-center justify-between  navbar md:h-20 sm:h-28 h-28">
-      <div className=" block ml-4"><img src={logo} alt="logo" className="h-[3rem]" />
-      <div className="flex relative top-4 w-40 mb-7 ml-1  bg-white rounded-full md:hidden sm:flex items-center px-2 w-{400px}  lg:w-[400] ">
-        <AiOutlineSearch size={36} />
-        <input
-          className="bg-transparent p-1 w-full focus:outline-none placeholder:italic"
-          type="text"
-          placeholder="Search"
-        />
-      </div>
+      <div className=" block ml-4">
+        <img src={logo} alt="logo" className="h-[3rem]" />
+        <div className="flex relative top-4 w-40 mb-7 ml-1  bg-white rounded-full md:hidden sm:flex items-center px-2 w-{400px}  lg:w-[400] ">
+          <AiOutlineSearch size={36} />
+          <input
+            className="bg-transparent p-1 w-full focus:outline-none placeholder:italic"
+            type="text"
+            placeholder="Search"
+          />
+        </div>
       </div>
       <div className="hidden bg-white rounded-full md:flex items-center px-2 w-{400px}  lg:w-[400] ">
         <AiOutlineSearch size={36} />
         <input
           className="bg-transparent p-1 w-full focus:outline-none placeholder:italic"
           type="text"
-          placeholder="Search the Product here..........."
+          placeholder="Search the Product here....."
         />
       </div>
       <div className="flex flex-row space-x-1.5 relative right-11">
@@ -52,7 +53,10 @@ const navbar = () => {
           </svg>
           cart(0)
         </Link>
-        <Link to="/" className=" bg-black  text-white px-4 hidden relative right-10  py-2 sm:flex rounded-full">
+        <Link
+          to="/"
+          className=" bg-black  text-white px-4 hidden relative right-10  py-2 sm:flex rounded-full"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -69,18 +73,23 @@ const navbar = () => {
           </svg>
           Signin
         </Link>
-         <div onClick={handleNav} className="sm:hidden  ">
-           { nav ?<AiOutlineClose size={20} /> :  <AiOutlineMenu size={30} />}
-         </div>
-         <div className={nav ? "fixed left-0 top-0 w-[30%] h-full md:hidden border-r-black-600  bg-gray-600 ease-in-out duration-500 " : "fixed left-[-100%]"}>
-         <ul className="uppercase p-4 flex flex-col">
+        <div onClick={handleNav} className="sm:hidden  ">
+          {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={30} />}
+        </div>
+        <div
+          className={
+            nav
+              ? "fixed left-0 top-0 w-[30%] h-full md:hidden border-r-black-600  bg-gray-600 ease-in-out duration-500 "
+              : "fixed left-[-100%]"
+          }
+        >
+          <ul className="uppercase p-4 flex flex-col">
             <li className="p-4  border-b border-black-600">Home </li>
             <li className="p-4 border-b border-black-600">Your orders</li>
             <li className="p-4 border-b border-black-600"> Your Payements</li>
             <li className="p-4 border-b border-black-600">about us</li>
-          </ul> 
-         </div>
-         
+          </ul>
+        </div>
       </div>
     </nav>
   );
