@@ -5,6 +5,12 @@ import { Link } from "react-router-dom";
 import { AiOutlineSearch,AiOutlineClose,AiOutlineMenu } from "react-icons/ai";
 
 const navbar = () => {
+   const[ nav,setNav] =useState(false)
+
+    const handleNav= () => {
+      setNav(!nav)
+    }
+  
   return (
     <nav className="flex  items-center justify-between navbar ">
       <img src={logo} alt="logo" className="h-[3rem]" />
@@ -54,10 +60,18 @@ const navbar = () => {
           </svg>
           Signin
         </Link>
-        <div  className=" text-white">
-          <h1 className=" w-full text-3xl font-bold"></h1>
-        
-        </div>
+         <div onClick={handleNav} className="block md:">
+           { nav ?<AiOutlineClose size={20} /> :  <AiOutlineMenu size={20} />}
+         </div>
+         <div className={nav ? "fixed left-0 top-0 w-[60%] h-full  border-r-black-600  bg-gray-600 ease-in-out duration-500 " : "fixed left-[-100%]"}>
+         <ul className="uppercase p-4">
+            <li className="p-4  border-b border-black-600">Home </li>
+            <li className="p-4 border-b border-black-600">Your orders</li>
+            <li className="p-4 border-b border-black-600"> Your Payements</li>
+            <li className="p-4 border-b border-black-600">about us</li>
+          </ul> 
+         </div>
+         
       </div>
     </nav>
   );
