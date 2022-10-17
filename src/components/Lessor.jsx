@@ -35,7 +35,7 @@ function Lessor() {
       <div className="bg-zinc-50 mx-6 px-3 flex my-12 h-56 col-span-3 text-xl">
         <div><h2 className="text-slate-500 mt-8  mb-2 ml-20 border-b-slate-400"><span className="font-extrabold">Alloted Price :</span> {`₹ ${data[5].Price}`}</h2>
         <h2 className="text-slate-500 my-2 ml-20"><span className="font-extrabold">Posted Date :</span> {` ${data[5].start_date}`}</h2>
-        <h2 className="text-slate-500 my-2 ml-20"><span className="font-extrabold">End Date :</span> {` ${data[1].end_date}`}</h2>
+        <h2 className="text-slate-500 my-2 ml-20"><span className="font-extrabold">End Date :</span> {` ${data[5].end_date}`}</h2>
         <h2 className="text-slate-500 text-xl my-2 ml-20"><span className="font-extralight">Rented To aravind12302@gamil.com</span> </h2>
         </div>
         <div>

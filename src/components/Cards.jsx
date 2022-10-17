@@ -14,7 +14,7 @@ function Cards(props) {
     <div><img src={props.data.img} className="border-2 p-2 mx-auto my-2 h-32 border-stone-900" alt="product"/></div>
     <h2 className=' ml-2 font-bold'>₹ {props.data.Price}</h2>
     <h2 className='ml-2 text-slate-500'> {props.data.pd_name} </h2>
-    <h2 className='ml-2 text-slate-500'> <span className='font-bold text-black'>Valid Until : </span>{props.data.end_date} </h2>
+    <h2 className='ml-2 text-slate-500'> <span className='font-bold text-black'>Available Until : </span>{props.data.end_date} </h2>
     <button className=' mx-auto mt-7 hover:font-bold hover:border-black'>Rent Now</button>
     <span className='relative flex justify-end mr-2 mb-0 mt-4 text-xs'>{props.data.start_date}</span>
 
