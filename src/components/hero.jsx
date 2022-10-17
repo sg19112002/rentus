@@ -26,7 +26,7 @@ const hero = () => {
           onClick={handleClick}
           className="border-none text-xl font-bold hover:bg-sky-200 "
         >
-          {" "}
+          
           PRODUCTS
         </button>
         <button
@@ -34,7 +34,7 @@ const hero = () => {
           onClick={handleClick}
           className="border-none hover:bg-lime-200 text-xl font-bold"
         >
-          LESSOR{" "}
+          LESSOR
         </button>
         <button
           name="lessee"

@@ -7,4 +7,4 @@ import surf from "./surf.jpg";
 import speaker from "./speaker.jpg";
 import airbnb from "./airbnb.png";
 
-export { logo, ps, drill, spanner, cycle, surf };
+export { logo, ps, drill, spanner, cycle, surf ,speaker};
