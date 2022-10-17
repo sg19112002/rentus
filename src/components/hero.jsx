@@ -46,6 +46,7 @@ const hero = () => {
       </div>
       <div>
         {layout == "product" ? (
+        
           <Product />
         ) : layout == "lessor" ? (
           <Lessor />

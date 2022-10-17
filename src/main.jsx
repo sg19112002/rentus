@@ -8,7 +8,10 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
-      <App/>
+    <Routes>
+      <Route path="/" element={<Login />} />
+      <Route path="app" element={<App />} />
+    </Routes>
     </BrowserRouter>
   </React.StrictMode>
 );
