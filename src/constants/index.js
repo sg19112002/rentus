@@ -8,7 +8,7 @@ const cards = [
     end_date :"Oct 22 2022",
     contact: "ADDRESS",
     phonenumber: "9896443470",
-    Price: "1,200",
+    Price: "1,200/Day",
     img: cycle,
   },
   {
@@ -18,7 +18,7 @@ const cards = [
     end_date :"Nov 5 2022",
     contact: "ADDRESS",
     phonenumber: "9435535450",
-    Price: "500",
+    Price: "500/Day",
     img: drill,
   },
   {
@@ -28,7 +28,7 @@ const cards = [
     end_date :"Oct 31 2022",
     contact: "ADDRESS",
     phonenumber: "9843633470",
-    Price: "200",
+    Price: "200/Day",
     img: spanner,
   },
   {
@@ -38,7 +38,7 @@ const cards = [
     end_date :"Oct 27 2022",
     contact: "ADDRESS",
     phonenumber: "9896436570",
-    Price: "750",
+    Price: "750/Day",
     img: ps,
   },
   {
@@ -48,7 +48,7 @@ const cards = [
     end_date :"Oct 22 2022",
     contact: "ADDRESS",
     phonenumber: "9896436570",
-    Price: "900",
+    Price: "900/Day",
     img: surf,
   },
   
@@ -59,7 +59,7 @@ const cards = [
     end_date :"Oct 29 2022",
     contact: "ADDRESS",
     phonenumber: "9895474670",
-    Price: "400",
+    Price: "400/Day",
     img: speaker,
   },
 ];
