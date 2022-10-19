@@ -5,7 +5,7 @@ import rating from "../assets/rating.png"
 
 function Lessee() {
   return (
-    <div className="bg-rose-200  h-screen mt-10 mx-4 grid-cols-4    py-7 px-8">
+    <div className="bg-rose-200  h-full mt-10 mx-4 grid-cols-4    py-7 px-8">
       <div className=" mx-auto w-full">
       <h1 className="font-extrabold text-4xl mt-4 ml-4"> Your Borrowed Items !</h1>
       </div>

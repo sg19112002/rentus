@@ -3,10 +3,12 @@ import {useState} from "react";
 import { BrowserRouter, Routes, Route, Link ,useNavigate} from "react-router-dom";
 import App from "./App"
 import { logo } from "./assets";
-const Login = () => { 
+const Login =() => { 
     const navigate = useNavigate();
-    const handleClick= () => {
-        navigate("/app");
+ 
+    const handleClick=  () => {
+       
+        navigate("/Home");
     }
     return (
     <div className ="relative h-96 w-full bg-green-300 grid grid-cols-2  justify-center min-h-screen overflow-hidden">
@@ -28,6 +30,7 @@ const Login = () => {
                 </label>
                 <input
                     type="email"
+                    name="email"
                     className="block w-full px-4 py-2 mt-2 text-purple-700 bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40"
                 />
             </div>
@@ -40,6 +43,7 @@ const Login = () => {
                 </label>
                 <input
                     type="password"
+                    name="password"
                     className="block w-full px-4 py-2 mt-2 text-purple-700 bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40"
                 />
             </div>

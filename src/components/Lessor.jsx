@@ -1,14 +1,42 @@
 import React from "react";
 import data from "../constants/index";
 import rating from "../assets/rating.png"
+import {useState} from "react";
+import { TiDelete } from 'react-icons/Ti';
+import {IoIosAddCircleOutline} from 'react-icons/Io';
+
+
+
 function Lessor() {
+  const [form,setForm]=useState(false);
+function handleForm (){
+  
+setForm(!form);
+}
+
+
   return (
-    <div className="bg-lime-200  h-screen  py-7 px-8 mt-10 mx-4 ">
-      <div className=" mx-auto col-span w-full">
-      <h1 className="font-extrabold text-4xl mt-4 ml-4"> Your Rented Items !</h1>
+    <div className="bg-lime-200  h-full  py-7 px-8 mt-10 mx-4 ">
+      <div className=" w-full flex justify-between ">
+      <h1 className="font-bold text-4xl mt-4 ml-4 "> Your Rented Items !</h1>
+       <button className="font-bold w-[20%] flex justify-around items-center  text-3xl mt-4 ml-4" onClick={handleForm}>RENT NEW {form?<TiDelete size={30} />:<IoIosAddCircleOutline/>}</button>    
       </div>
-      <div className="grid gap-x-0 grid-cols-4 h-[39rem]">
-      <div className="bg-zinc-50 mx-6 px-3 my-12 h-56  ">
+      
+      <div className={"mx-auto w-[40%]  px-16 py-10  bg-white mt-16 ease-in-out  "+(!form?"hidden":"block")}>
+      <form className="grid grid-cols-2 gap-y-3">
+      <label className="font-semibold text-xl  text-slate-600" for="productname"> Name of the product :</label>
+        <input type="text"  name="productname" className="px-3 py-1 rounded-md border-2 border-green-600 relative  ml-4" /> 
+        <label className="font-semibold text-xl text-slate-600" for="price"> Price :</label>
+        <input type="text"  name="price" className="px-3 py-1 rounded-md border-2 border-green-600 relative  ml-4" /> 
+        <label className="font-semibold text-xl text-slate-600" for="enddate"> Available Till :</label>
+        <input type="text"  name="enddate" className="px-3 py-1 rounded-md border-2 border-green-600 relative  ml-4" /> 
+        <label className="font-semibold text-xl cursor-pointer text-slate-600" for="productname"> Add Image :
+        </label>
+      <input type="file" accept="image/png, image/jpg, image/gif, image/jpeg "  name="productname" className="ml-4 " /> 
+      </form>
+      </div>
+      <div className="grid grid-row gap-x-0 row-span-full grid-cols-4  h-full">
+      <div className="bg-zinc-50 row-start- mx-6 px-3 my-12 h-56  ">
 
         <img src={data[0].img} className="pt-6 mx-auto"/>
         <h1 className="mx-auto px-2 mt-2">{data[0].pd_name}</h1>

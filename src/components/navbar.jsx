@@ -11,6 +11,7 @@ const navbar = () => {
   };
 
   return (
+    
     <nav className="flex  items-center justify-between  navbar md:h-20 sm:h-28 h-28">
       <div className=" block ml-4">
         <img src={logo} alt="logo" className="h-[3rem]" />
@@ -32,8 +33,8 @@ const navbar = () => {
         />
       </div>
       <div className="flex flex-row space-x-1.5 relative right-11">
-        <Link
-          to="/"
+        <button
+          
           className="bg-violet-400 text-white px-4 hidden  relative right-11  py-2 sm:flex rounded-full  hover:bg-violet-600"
         >
           <svg
@@ -51,9 +52,9 @@ const navbar = () => {
             />
           </svg>
           cart
-        </Link>
-        <Link
-          to="/"
+        </button>
+        <button
+          
           className=" bg-black  text-white px-4 hidden relative right-10  py-2 sm:flex rounded-full"
         >
           <svg
@@ -71,7 +72,7 @@ const navbar = () => {
             />
           </svg>
           Signin
-        </Link>
+        </button>
         <div onClick={handleNav} className="sm:hidden  ">
           {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={30} />}
         </div>
