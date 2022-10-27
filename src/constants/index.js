@@ -10,6 +10,8 @@ const cards = [
     phonenumber: "9896443470",
     Price: "1,200/Day",
     img: cycle,
+    specification:{
+    brand:"hero",color:"red",gear:"yes",}
   },
   {
     usename: "Roshan",

@@ -4,16 +4,34 @@ import rating from "../assets/rating.png"
 import {useState} from "react";
 import { TiDelete } from 'react-icons/Ti';
 import {IoIosAddCircleOutline} from 'react-icons/Io';
+import Axios from "axios";
 
 
 
 function Lessor() {
   const [form,setForm]=useState(false);
+  const[name,setName]=useState("");
+  const[price,setPrice]=useState("");
+  const[endDate,setEnd]=useState("");
+
+  
 function handleForm (){
   
 setForm(!form);
 }
+function handleClick(e){
+  e.preventDefault();
+  let currentDate = new Date()
+const offset = currentDate.getTimezoneOffset()
+currentDate = new Date(currentDate.getTime() - (offset*60*1000))
+const startDate=currentDate.toISOString().split('T')[0]
 
+
+
+Axios.post("http://localhost:3000/addProduct",{name:name,price:Number(price),startDate:startDate,endDate:endDate})
+.then(()=>{alert("Product Created")}).catch(()=>{alert("Failed to create")})
+
+}
 
   return (
     <div className="bg-lime-200  h-full  py-7 px-8 mt-10 mx-4 ">
@@ -22,19 +40,24 @@ setForm(!form);
        <button className="font-bold w-[20%] flex justify-around items-center  text-3xl mt-4 ml-4" onClick={handleForm}>RENT NEW {form?<TiDelete size={30} />:<IoIosAddCircleOutline/>}</button>    
       </div>
       
+      {/* Creating the form to add products */}
       <div className={"mx-auto w-[40%]  px-16 py-10  bg-white mt-16 ease-in-out  "+(!form?"hidden":"block")}>
       <form className="grid grid-cols-2 gap-y-3">
       <label className="font-semibold text-xl  text-slate-600" for="productname"> Name of the product :</label>
-        <input type="text"  name="productname" className="px-3 py-1 rounded-md border-2 border-green-600 relative  ml-4" /> 
+        <input type="text" onChange={(e)=>{setName(e.target.value)}} name="productname" className="px-3 py-1 rounded-md border-2 border-green-600 relative  ml-4" /> 
         <label className="font-semibold text-xl text-slate-600" for="price"> Price :</label>
-        <input type="text"  name="price" className="px-3 py-1 rounded-md border-2 border-green-600 relative  ml-4" /> 
+        <input type="text" onChange={(e)=>{setPrice(e.target.value)}} name="price" className="px-3 py-1 rounded-md border-2 border-green-600 relative  ml-4" /> 
         <label className="font-semibold text-xl text-slate-600" for="enddate"> Available Till :</label>
-        <input type="text"  name="enddate" className="px-3 py-1 rounded-md border-2 border-green-600 relative  ml-4" /> 
+        <input type="date" onChange={(e)=>{setEnd(e.target.value);console.log(e.target.value);console.log(typeof(e.target.value))}} name="enddate" className="px-3 py-1 rounded-md border-2 border-green-600 relative  ml-4" /> 
         <label className="font-semibold text-xl cursor-pointer text-slate-600" for="productname"> Add Image :
         </label>
       <input type="file" accept="image/png, image/jpg, image/gif, image/jpeg "  name="productname" className="ml-4 " /> 
+      <button onClick={handleClick} className="bg-lime-200 mt-11 hover:bg-green-300 h-12 col-span-2 mx-auto w-1/3">SUBMIT</button>
       </form>
       </div>
+
+      {/* Displaying the items rent */}
+
       <div className="grid grid-row gap-x-0 row-span-full grid-cols-4  h-full">
       <div className="bg-zinc-50 row-start- mx-6 px-3 my-12 h-56  ">
 
